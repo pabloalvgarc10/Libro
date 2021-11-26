@@ -12,6 +12,7 @@ public class Libro {
 
     private String autor;
     private String titulo;
+    private int numeroPaginas;
 
     /**
      * Fija el autor y el titulo del libro a los dados como parametro
@@ -28,5 +29,9 @@ public class Libro {
     
     public String getTitulo(){
             return titulo;
+    }
+    
+    public int numeroPaginas(){
+            return numeroPaginas;
     }
 }

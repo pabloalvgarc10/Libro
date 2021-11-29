@@ -54,7 +54,7 @@ public class Libro {
     
     
     public String getDetalles(){
-        String detalles = ("Titulo Libro" + titulo + "Autor" + autor + "Paginas" + numeroPaginas);
+        String detalles = ("Titulo Libro" + titulo + "Autor" + autor + "Paginas" + numeroPaginas + "Numero referencia" + numeroReferencia);
         String numeroReferencia = "";
         
         if(numeroReferencia !=""){
@@ -72,9 +72,9 @@ public class Libro {
         return numeroReferencia;
     }
     
-    public void setnumeroReferencia(String Referencia){
-        if(Referencia.length()>3){
-            numeroReferencia = Referencia;
+    public void setnumeroReferencia(String referencia){
+        if(referencia.length()>3){
+            numeroReferencia = referencia;
         }
         else{
             System.out.println("al menos tres caracteres");

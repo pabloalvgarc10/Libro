@@ -73,7 +73,7 @@ public class Libro {
     }
     
     public void setnumeroReferencia(String Referencia){
-        if(numeroReferencia.length()>3){
+        if(Referencia.length()>3){
             numeroReferencia = Referencia;
         }
         else{

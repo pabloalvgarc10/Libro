@@ -54,16 +54,15 @@ public class Libro {
     
     
     public String getDetalles(){
-        String detalles = ("Titulo Libro" + titulo + "Autor" + autor + "Paginas" + numeroPaginas + "Numero referencia" + numeroReferencia);
+        String detalles = ("Titulo Libro" + titulo + "Autor" + autor + "Paginas" + numeroPaginas + ".." );
         String numeroReferencia = "";
         
-        if(numeroReferencia !=""){
-                System.out.println("numero referencia" + numeroReferencia);
+        if(numeroReferencia ==("")){
+            detalles = "Titulo Libro" + titulo + "Autor" + autor + "Paginas" + "NumeroPaginas" + numeroPaginas + "numeroReferencia ZZ";
         }
         else{
-            System.out.println("numero referencia = ZZZ");
+            detalles = "Titulo Libro" + titulo + "Autor" + autor + "Paginas" + "NumeroPaginas" + numeroPaginas + numeroReferencia + "..";
         }
-        
         
         return detalles;
     }

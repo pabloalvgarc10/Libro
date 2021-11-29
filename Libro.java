@@ -72,9 +72,9 @@ public class Libro {
         return numeroReferencia;
     }
     
-    public void setnumeroReferencia(String numeroReferencia){
+    public void setnumeroReferencia(String Referencia){
         if(numeroReferencia.length()>3){
-            numeroReferencia = numeroReferencia;
+            numeroReferencia = Referencia;
         }
         else{
             System.out.println("al menos tres caracteres");

@@ -13,6 +13,7 @@ public class Libro {
     private String autor;
     private String titulo;
     private int numeroPaginas;
+    private String numeroReferencia;
     
 
     /**
@@ -23,6 +24,7 @@ public class Libro {
         autor = autorLibro;
         titulo = tituloLibro;
         numeroPaginas = numeroDePaginas;
+        numeroReferencia = "";
     }
 
     public String getAutor(){
@@ -41,15 +43,42 @@ public class Libro {
         System.out.println("Titulo Libro" + titulo);
         System.out.println("Autor Libro"  + autor);
         System.out.println("Paginas Libro" + numeroPaginas);
+        
+        if(numeroReferencia != ""){
+            System.out.println("numero referencia" + numeroReferencia);
+        }
+        else{
+            System.out.println("numero referencia = ZZZ");
+        }
     }
     
     
     public String getDetalles(){
         String detalles = ("Titulo Libro" + titulo + "Autor" + autor + "Paginas" + numeroPaginas);
+        String numeroReferencia = "";
+        
+        if(numeroReferencia !=""){
+                System.out.println("numero referencia" + numeroReferencia);
+        }
+        else{
+            System.out.println("numero referencia = ZZZ");
+        }
+        
         
         return detalles;
     }
     
-    
-    
+    public String getNumeroReferencia(){
+        return numeroReferencia;
     }
+    
+    public void setnumeroReferencia(String numeroReferencia){
+        if(numeroReferencia.length()>3){
+            numeroReferencia = numeroReferencia;
+        }
+        else{
+            System.out.println("al menos tres caracteres");
+        }
+    }
+        
+}

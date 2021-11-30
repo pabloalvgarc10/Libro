@@ -45,7 +45,15 @@ public class Libro {
     
     
     public void imprimirDetalles(){
-        String esTexto = "..";
+        String esTexto = "";
+        
+        if(esLibroDeTexto == true){
+            esTexto = "yes";
+        }
+        
+        if(esLibroDeTexto == false){
+            esTexto = "no";
+        }
         
         System.out.println("Titulo Libro" + titulo);
         System.out.println("Autor Libro"  + autor);
@@ -62,20 +70,13 @@ public class Libro {
         
         
         
-        if(esLibroDeTexto == true){
-            esTexto = "yes";
-        }
-        
-        if(esLibroDeTexto == false){
-            esTexto = "no";
-        }
     }
     
     
     public String getDetalles(){
-        String detalles = "..";
+        String detalles = "";
         
-        String esTexto = "..";
+        String esTexto = "";
         
         if(esLibroDeTexto == true){
             esTexto = "yes";

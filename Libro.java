@@ -55,7 +55,7 @@ public class Libro {
     
     public String getDetalles(){
         String detalles = ("Titulo Libro" + titulo + "Autor" + autor + "Paginas" + numeroPaginas + ".." );
-        String numeroReferencia = "";
+        
         
         if(numeroReferencia ==("")){
             detalles = "Titulo Libro" + titulo + "Autor" + autor + "Paginas" + "NumeroPaginas" + numeroPaginas + "numeroReferencia ZZ";

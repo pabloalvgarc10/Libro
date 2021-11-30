@@ -73,25 +73,26 @@ public class Libro {
     
     
     public String getDetalles(){
-        String detalles = ("Titulo Libro" + titulo + "Autor" + autor + "Paginas" + numeroPaginas + ".." );
+        String detalles = "..";
         
-        
-        if(numeroReferencia ==("")){
-            detalles = "Titulo Libro" + titulo + "Autor" + autor + "Paginas" + "NumeroPaginas" + numeroPaginas + "numeroReferencia ZZ" + "Veces prestado" + vecesPrestado; 
-        }
-        else{
-            detalles = "Titulo Libro" + titulo + "Autor" + autor + "Paginas" + "NumeroPaginas" + numeroPaginas + numeroReferencia + ".." +  "Veces prestado" + vecesPrestado; 
-        }
-        
-        String Texto = "..";
+        String esTexto = "..";
         
         if(esLibroDeTexto == true){
-            Texto = "yes";
+            esTexto = "yes";
         }
         
         if(esLibroDeTexto == false){
-            Texto = "no";
+            esTexto = "no";
         }
+        
+        if(numeroReferencia ==("")){
+            detalles = "Titulo Libro" + titulo + "Autor" + autor + "Paginas" + "NumeroPaginas" + numeroPaginas + "numeroReferencia ZZ" + "Veces prestado" + vecesPrestado + "EsLibroDeTexto" + esTexto;
+        }
+        else{
+            detalles = "Titulo Libro" + titulo + "Autor" + autor + "Paginas" + "NumeroPaginas" + numeroPaginas + numeroReferencia + ".." +  "Veces prestado" + vecesPrestado + "EsLibroDeTexto" + esTexto;
+        }
+        
+        
         return detalles;
     }
     

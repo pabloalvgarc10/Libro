@@ -14,6 +14,7 @@ public class Libro {
     private String titulo;
     private int numeroPaginas;
     private String numeroReferencia;
+    private int vecesPrestado;
     
 
     /**
@@ -25,6 +26,7 @@ public class Libro {
         titulo = tituloLibro;
         numeroPaginas = numeroDePaginas;
         numeroReferencia = "";
+        vecesPrestado = 0;
     }
 
     public String getAutor(){
@@ -39,10 +41,12 @@ public class Libro {
             return numeroPaginas;
     }
     
+    
     public void imprimirDetalles(){
         System.out.println("Titulo Libro" + titulo);
         System.out.println("Autor Libro"  + autor);
         System.out.println("Paginas Libro" + numeroPaginas);
+        System.out.println("Veces Prestado" + vecesPrestado);
         
         if(numeroReferencia != ""){
             System.out.println("numero referencia" + numeroReferencia);
@@ -58,10 +62,10 @@ public class Libro {
         
         
         if(numeroReferencia ==("")){
-            detalles = "Titulo Libro" + titulo + "Autor" + autor + "Paginas" + "NumeroPaginas" + numeroPaginas + "numeroReferencia ZZ";
+            detalles = "Titulo Libro" + titulo + "Autor" + autor + "Paginas" + "NumeroPaginas" + numeroPaginas + "numeroReferencia ZZ" + "Veces prestao" + vecesPrestado;
         }
         else{
-            detalles = "Titulo Libro" + titulo + "Autor" + autor + "Paginas" + "NumeroPaginas" + numeroPaginas + numeroReferencia + "..";
+            detalles = "Titulo Libro" + titulo + "Autor" + autor + "Paginas" + "NumeroPaginas" + numeroPaginas + numeroReferencia + ".." +  "Veces prestao" + vecesPrestado;
         }
         
         return detalles;
@@ -79,5 +83,12 @@ public class Libro {
             System.out.println("al menos tres caracteres");
         }
     }
-        
+    
+    public int getVecesPrestado(){
+        return vecesPrestado;
+    }
+    
+    public void prestar(){
+        vecesPrestado +=1;
+    }
 }
